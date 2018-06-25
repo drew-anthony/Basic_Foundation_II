@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>basicFoundationI</title>
+</head>
+<body>
+	<script>
+		function makeItBig(arr){
+			for(i=0;i<arr.length;i++){
+				if(arr[i]>0){
+					arr[i]='big'
+				}
+			}
+			return arr;
+		}
+		function printLowReturnHigh(arr){
+			min=arr[0];
+			max=arr[0];
+
+			for(i=0;i<arr.length;i++){
+				if(arr[i]<min){
+					min=arr[i];
+				}
+				if(arr[i]>max){
+					max=arr[i];
+				}
+			}
+			console.log(min);
+			return max;
+		}
+		function printOneReturnAnother(arr){
+			console.log(arr[arr.length-2]);
+
+			for(i=0;i<arr.length;i++){
+				if(arr[i]%2!==0){
+					return arr[i];
+				}
+			}
+		}
+		function doubleVision(arr){
+			for(i=0;i<arr.length;i++){
+				arr[i]=arr[i]*2;
+			}
+			return arr;
+		}
+		function countPositives(arr){
+			var sum = 0
+			for(i=0;i<arr.length;i++){
+				if(arr[i]>0){
+					sum++;
+				}
+			}
+			arr[arr.length-1]=sum;
+			return arr;
+		}
+		function evensAndOdds(arr){
+
+			for(i=0;i<arr.length;i++){
+				if (arr[i] && arr[i+1] && arr[i+2]){
+				(arr[i]%2===0 && arr[i+1]%2===0 && arr[i+2]%2===0)
+						console.log("Even more so!")
+				}
+				if(arr[i]%2!==0 && arr[i+1]%2!==0 && arr[i+2]%2!==0){
+						console.log("That's odd!")
+				}
+			}
+		}
+		function incrementTheSeconds(arr){
+			for(i=0;i<arr.length;i++){
+				if(i%2!==0){
+					arr[i]++;
+					console.log(i);
+				}
+			}
+			return arr;
+		}
+		function previousLengths(arr){
+			for(i=arr.length-1;i>0;i--){
+				arr[i]=arr[i-1].length;
+			}
+			return arr;
+		}
+		function addSeven(arr){
+			var newArr = []
+
+			for(i=1;i<arr.length;i++){
+				arr[i]=arr[i]+7;
+				newArr.push(arr[i]);
+			}
+			return newArr;
+		}
+		function reverseArray(arr){
+			for(i=0;i<math.floor(arr.length/2);i++){
+				temp = arr[i];
+				arr[i] = arr[arr.length-1-i];
+				arr[arr.length-1-i=temp]
+			}
+			return arr;
+		}
+		function outlookNegative(arr){
+			for(i=0;i<arr.length;i++){
+				if(arr[i]>0){
+					arr[i]=-arr[i];
+				}
+			}
+			return arr;
+		}
+		function alwaysHungry(arr){
+			var count = 0;
+			for(i=0;i<arr.length;i++){
+				if(arr[i]=='food'){
+					count++;
+					console.log('yummy');
+				}
+				else if(arr[i]==arr[arr.length-1] && count==0){
+					console.log("i'm hungry");
+				}
+			}
+		}
+		function swapTowardCenter(arr){
+			for(i=0;i<math.floor(arr.length/2);i++){
+				if(i%2==0){
+				temp=arr[i];
+				arr[i]=arr[arr.length-1-i];
+				arr[arr.length-1-i]=temp;
+			}
+			}
+			return arr;
+		}
+		function scaleTheArray(arr,num){
+			for(i=0;i<arr.length;i++){
+				arr[i]=arr[i]*num;
+			}
+			return arr;
+		}
+	</script>
+</body>
+</html>
